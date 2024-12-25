@@ -1,0 +1,510 @@
+/* animtion */
+@keyframes fade-in {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Anta", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black url('images/Ocko.gif') no-repeat center;
+    z-index: 9999;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    font-size: 2rem;
+    animation: fade-in 2s;
+    margin-top: 2rem;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.List {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    gap: 4rem;
+}
+
+.ListItems a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem 0;
+    transition: color 0.4s;
+}
+
+.ListItems a:hover {
+    transform: scale(1.3);
+    color: red;
+}
+
+.ListItems {
+    transition: transform 0.4s;
+}
+
+.ListItems:hover {
+    transform: scale(1.3);
+}
+
+.main {
+    background-image: url("images/laptop2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.Hero {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15rem;
+}
+
+.Fline {
+    font-size: 4rem;
+}
+
+.Sline {
+    font-size: 8rem;
+}
+
+.Tline {
+    font-size: 4rem;
+}
+
+.Tline .dev {
+    color: red;
+}
+
+.Redline {
+    color: red;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.Hirebtn {
+    font-size: 3rem;
+    color: white;
+    width: 20rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: red;
+    border-radius: 2rem;
+    transition: all 0.4s;
+}
+
+.Hirebtn:hover {
+    cursor: pointer;
+    color: red;
+    background-color: transparent;
+    transform: scale(1.1);
+    border-color: red;
+}
+
+.AboutMe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(images/page2.jpg);
+    background-attachment: fixed;
+}
+
+.AboutMe .head {
+    text-align: center;
+}
+
+.title {
+    margin-top: 15rem;
+    color: white;
+    text-transform: capitalize;
+    font-size: 3.2rem;
+}
+
+.title2 {
+    text-transform: capitalize;
+    font-size: 2rem;
+    color: red;
+}
+
+.Redline2 {
+    color: red;
+}
+
+.profile {
+    display: flex;
+    gap: 18rem;
+    max-width: 120rem;
+    color: white;
+    align-items: center;
+}
+
+.profile-image {
+    width: 30rem;
+    border-radius: 5rem;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+    font-size: 2.5rem;
+}
+
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    justify-content: center;
+    padding: 0 2rem;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    background-image: url(images/page3.jpg);
+    background-attachment: fixed;
+}
+
+.skill-headings {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.skillpart {
+    display: flex;
+    justify-content: center;
+    max-width: 70%;
+    margin: 0 auto;
+    gap: 5rem;
+}
+
+.leftskills {
+    flex: 1;
+    text-align: left;
+    font-size: 2.5rem;
+}
+
+.rightskills {
+    flex: 2;
+}
+
+.skill-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.skill-name {
+    font-size: 2rem;
+    width: 20%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 2.5rem;
+    background-color: #ddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    color: white;
+    text-align: right;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    line-height: 2.5rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 5s ease-in-out;
+}
+
+.progress.active {
+    transform: scaleX(1);
+}
+
+.portfolio {
+    padding: 5rem 2rem;
+    background-image: url('images/page4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+.portfolio-heading {
+    font-size: 3.2rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    max-width: 140rem;
+    margin: 10rem auto;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.1);
+}
+
+.project-bg {
+    width: 100%;
+    height: 28rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .project-bg {
+    opacity: 0.6;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.project-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.project-link {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+    border: 0.2rem solid #4caf50;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #4caf50;
+    color: black;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(images/page5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contact-form-container {
+    padding: 3rem;
+    border-radius: 5rem;
+    width: 100%;
+    max-width: 60rem;
+    background-color: rgba(46, 33, 33, 0.5);
+}
+
+.conthead {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title1 {
+    color: white;
+    text-transform: capitalize;
+    font-size: 3.2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.form-field {
+    margin-bottom: 3rem;
+}
+
+.form-field label {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    border: 0.5rem solid #ccc;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: #007bff;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.insta {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin: auto;
+    padding: auto;
+}
+
+footer span a {
+    color: crimson;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+.insta a {
+    color: white;
+}
+
+.insta a:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 1080px) {
+    html {
+        font-size: 50%;
+    }
+
+    .main,
+    .AboutMe,
+    .skills,
+    .portfolio,
+    .contact {
+        height: 80vh;
+    }
+
+    .skills {
+        gap: 15rem;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 40%;
+    }
+
+    .main,
+    .AboutMe,
+    .skills,
+    .portfolio {
+        height: 60vh;
+    }
+
+    .skills {
+        gap: 10rem;
+    }
+}
+
+@media screen and (max-width: 584px) {
+    html {
+        font-size: 30%;
+    }
+
+    .main,
+    .AboutMe,
+    .skills,
+    .portfolio {
+        height: 50vh;
+    }
+
+    .skills {
+        padding-top: 10rem;
+        gap: 5rem;
+    }
+}
